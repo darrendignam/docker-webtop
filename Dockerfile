@@ -7,13 +7,13 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE="Debian XFCE"
+ENV TITLE="ViPER Cloud"
 
 RUN \
   echo "**** add icon ****" && \
   curl -o \
     /kclient/public/icon.png \
-    https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png && \
+    https://viper.openpreservation.org/apple-touch-icon.png && \
   echo "**** install packages ****" && \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive \
@@ -54,4 +54,4 @@ COPY /root /
 
 # ports and volumes
 EXPOSE 3000
-VOLUME /config
+# VOLUME /config
